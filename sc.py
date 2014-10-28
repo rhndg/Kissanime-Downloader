@@ -20,8 +20,6 @@ def get_video_list (anime):
   soup = bs4.BeautifulSoup(res.text);
   links = soup.select('table a[href^=/Anime/' + anime + '/]');
   hrefs = [a.attrs.get('href') for a in links]
-  #vids['t'] = re.split("-", re.split("\?", vids['l'][0])[0])[-1];
-  #print vids['t'];
   return hrefs;
 
 def get_video_data (video_page_url):
@@ -30,7 +28,6 @@ def get_video_data (video_page_url):
   soup = bs4.BeautifulSoup(res.text);
   video_data['dls'] = soup.select('div#divDownload a')[0];
   video_data['l'] = video_data['dls'].attrs.get('href');
-  #print video_data['l'];
   return video_data;
 
 def download (anime, url, i_, _d):
@@ -47,7 +44,6 @@ def download (anime, url, i_, _d):
     else:
       #print ("[Skipping]", i, "(Already exists)");
       return False;
-  #urllib.urlretrieve(url['l'], i)
   if not _d:
     print (d(), "[Anime]", anime);
   print (d(), "[Downloading]", i);
