@@ -17,4 +17,4 @@ Download high-res anime video's from Kissanime.com
     
     Lines starting with a '#' symbol will be ignored.
 	  Adding a '#' symbol after the anime name will allow you to restrict the range of episodes to be downloaded 
-	  (eg. Akame-ga-Kill#5-7 will download only episodes 5, 6, and 7)
+	  (eg. Akame-ga-Kill#5-7 will only download episodes 5, 6, and 7)
