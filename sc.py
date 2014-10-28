@@ -5,9 +5,7 @@ import bs4
 import urllib
 from time import strftime
 from urllib.request import urlopen
-import re
-import os, sys
-from multiprocessing import Pool
+import re, os, sys
 
 
 root_url = 'http://www.kissanime.com';
