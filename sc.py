@@ -2,9 +2,13 @@
 
 import requests
 import bs4
-import urllib
+try:
+	# for Python 3
+	from urllib.request  import urlopen
+except ImportError:
+	# for Python 2.x, 
+	from urllib2 import urlopen
 from time import strftime
-from urllib.request import urlopen
 import re, os, sys
 
 
